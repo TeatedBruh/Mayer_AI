@@ -1,0 +1,198 @@
+Part 1 — Understand the Business Problem — 10 Points
+
+Choose one business problem from the following or from your domain:
+
+Fraud detection
+Customer churn
+Credit scoring
+Demand forecasting
+Product recommendation
+Employee turnover
+Sales forecasting
+Customer segmentation
+Inventory management
+Marketing campaign targeting
+Answer: Marketing campaign targeting
+
+What is the business problem?
+Write 4-6 sentences.
+Marketing campaign targeting follows the problem of how best to advertise the product to an audience. It needs a healthy balance between keeping returning/loyal customers and targeting newer audiences. The marketing needs to return a profit: if the money spent on advertisements or promo's is more than the resulting influx of customers and revenue, than the marketing campaign should be considered a failure. 
+
+Why is this problem important to the organization?
+Write 4-6 sentences.
+
+Who is affected by this problem?
+Examples:
+
+Customers
+Employees
+Managers
+Sales teams
+Finance department
+Marketing department
+Part 2 — Identify the Data — 10 Points
+
+Think about what information an AI system would need.
+
+Complete:
+
+Question
+
+Your Answer
+
+What data would you need?
+
+Where could the data come from?
+
+How much historical data might be useful?
+
+What would be the most important variables?
+
+What could be missing or inaccurate?
+
+Example
+
+For customer churn:
+
+Possible data:
+
+Customer age
+Length of relationship
+Monthly bill
+Number of complaints
+Product usage
+Contract type
+Previous cancellations
+Part 3 — Identify Features and Target — 10 Points
+
+Suppose you are building a machine learning system.
+
+What information would you give the model?
+These are your features.
+
+List at least 5 features.
+
+Example:
+
+Customer age
+Monthly spending
+Number of complaints
+Contract length
+Product usage
+What would you want the model to determine?
+This is the target/output.
+
+Example:
+
+Customer will churn: Yes/No
+
+Part 4 — Select the AI/ML Approach — 10 Points
+
+Answer the following.
+
+Would you use supervised or unsupervised learning?
+Choose:
+
+☐ Supervised Learning
+☐ Unsupervised Learning
+☐ Not sure
+
+Explain your choice.
+Write 4-6 sentences.
+
+Would the problem involve classification or prediction?
+Choose:
+
+☐ Classification
+☐ Prediction
+☐ Both
+☐ Neither
+
+Explain your choice.
+Write 4-6 sentences.
+
+Part 5 — Data Quality and Business Impact — 10 Points
+
+Identify three possible data-quality problems.
+Examples:
+
+Missing information
+Incorrect values
+Duplicate records
+Outdated information
+Inconsistent formats
+Biased data
+What could happen if the data is poor?
+Write 4-6 sentences.
+
+Consider:
+
+Poor data → Poor model → Poor business decision
+
+Part 6 — Complete AI Solution Summary
+
+Complete this final section:
+
+Business Problem
+
+Data Needed
+
+AI/ML Approach
+
+Type of Learning
+
+Model Output
+
+Business Benefit
+
+Potential Risk
+
+Assignment Example
+
+Here is an example
+
+Business Problem
+
+A telecommunications company wants to identify customers who are likely to cancel their subscriptions.
+
+Data Needed
+
+The company could use:
+
+Customer tenure
+Monthly bill
+Number of complaints
+Internet usage
+Contract type
+Number of support calls
+Learning Type
+
+Supervised learning
+
+Why?
+
+Because the company has historical data showing which customers previously cancelled.
+
+Classification or Prediction?
+
+Classification
+
+The model could classify customers as:
+
+Likely to Churn / Not Likely to Churn
+
+Data Quality Problems
+
+The company might have:
+
+Missing customer information
+Incorrect billing information
+Duplicate customer records
+Business Benefit
+
+The company could identify high-risk customers and offer them discounts or improved services before they leave.
+
+Potential Risk
+
+The model could incorrectly identify customers as high-risk, resulting in unnecessary discounts or marketing expenses.
+
