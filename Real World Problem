@@ -16,22 +16,13 @@ Answer: Marketing campaign targeting
 
 What is the business problem?
 Write 4-6 sentences.
-Marketing campaign targeting follows the problem of how best to advertise the product to an audience. It needs a healthy balance between keeping returning/loyal customers and targeting newer audiences. The marketing needs to return a profit: if the money spent on advertisements or promo's is more than the resulting influx of customers and revenue, than the marketing campaign should be considered a failure. There are several avenues to track a targeted marketing campaigns success: revenue increase, customer increase, rating increase, reach, etc.
+Marketing campaign targeting follows the problem of how best to advertise the product to an audience. It needs a healthy balance between keeping returning/loyal customers and targeting newer audiences. The marketing needs to return a profit: if the money spent on advertisements or promo's is more than the resulting influx of customers and revenue, than the marketing campaign should be considered a failure. There are several avenues to track a targeted marketing campaign's success: revenue increase, customer increase, rating increase, reach, etc.
 
 Why is this problem important to the organization?
 Write 4-6 sentences.
-This is an important problem because it's solution directly benefits most aspects of the company. If a good, consistent campaign is run, then all facets of the company will increase, and allow for further reach. If a bad campaign is run, then time and money is wasted, resulting in a net-loss for the organization. Thus, the problem is important and should be taken seriously with lots of research and effort invested in generating a good campaign.
+This is an important problem because its solution directly benefits most aspects of the company. If a good, consistent campaign is run, then all facets of the company will increase, and allow for further reach. If a bad campaign is run, then time and money is wasted, resulting in a net-loss for the organization. Thus, the problem is important and should be taken seriously with lots of research and effort invested in generating a good campaign.
 
 Who is affected by this problem?
-Examples:
-
-Customers
-Employees
-Managers
-Sales teams
-Finance department
-Marketing department
-
 Customers, sales team, finance department, marketing department. 
 
 Part 2 — Identify the Data — 10 Points
@@ -40,94 +31,63 @@ Think about what information an AI system would need.
 
 Complete:
 
-Question
-
-Your Answer
-
 What data would you need?
+Ratings, reviews, size of customer base, price of product, and previous marketing strategies if possible.
 
 Where could the data come from?
+I will be using Google Play Store app data from Kaggle:
+L. Gupta, "Google Play Store Apps," Feb 2019. [Online]. 
+Available: https://www.kaggle.com/lava18/google-play-store-apps
 
 How much historical data might be useful?
+Previous marketing campaigns would be extremely useful to see what type of advertising works best on which audiences, and which generates the most revenue.
 
 What would be the most important variables?
+Ratings, size of customer base, and price of products.
 
 What could be missing or inaccurate?
+Some customers will not leave reviews on the product, so ratings and reviews can be a little inaccurate and biased. Certain individuals will spend far more money than the average depending on their disposition, and this information is impossible to predict with reasonable data. The data set I am using is specifically for Google Play, which is largely dominated by android users, and therefore the data cannot necessarily be generalized to all apps across multiple brands. Increases in app usage cannot be directly correlated to organization’s efforts, i.e. some external factor could result in sudden increases, like a popular content creator using it.
 
-Example
-
-For customer churn:
-
-Possible data:
-
-Customer age
-Length of relationship
-Monthly bill
-Number of complaints
-Product usage
-Contract type
-Previous cancellations
 Part 3 — Identify Features and Target — 10 Points
 
 Suppose you are building a machine learning system.
 
 What information would you give the model?
-These are your features.
+These are your features:
+Category, ratings, reviews, price of app, installs, content rating
 
-List at least 5 features.
-
-Example:
-
-Customer age
-Monthly spending
-Number of complaints
-Contract length
-Product usage
 What would you want the model to determine?
 This is the target/output.
 
-Example:
-
-Customer will churn: Yes/No
+Determine which marketing strategies are more effective, tracking the increase in customers as a signifier. 
 
 Part 4 — Select the AI/ML Approach — 10 Points
 
 Answer the following.
 
 Would you use supervised or unsupervised learning?
-Choose:
+Choose: Unsupervised Learning
 
-☐ Supervised Learning
-☐ Unsupervised Learning
-☐ Not sure
 
 Explain your choice.
 Write 4-6 sentences.
+As opposed to supervised learning that decides a definitive outcome from the data, we want an unsupervised approach. This will allow the model to produce interpretable outcomes, as there is no correct outcome in this instance. The model should be looking for patterns in the data and use those patterns to determine how effective the marketing strategy was. 
 
 Would the problem involve classification or prediction?
-Choose:
-
-☐ Classification
-☐ Prediction
-☐ Both
-☐ Neither
+Prediction
 
 Explain your choice.
 Write 4-6 sentences.
+We’re not trying to get a yes/no outcome from the data, we’re trying to figure out if it worked, what parts worked out, and why. We’re looking for the model to use the data in order to determine whether or not certain marketing techniques would be efficient. This leans more towards prediction, as it’s finding a more general, interpretable piece of data rather than a definitive outcome.
 
 Part 5 — Data Quality and Business Impact — 10 Points
 
 Identify three possible data-quality problems.
-Examples:
+Outdated information, biased data, external variables
 
-Missing information
-Incorrect values
-Duplicate records
-Outdated information
-Inconsistent formats
-Biased data
 What could happen if the data is poor?
 Write 4-6 sentences.
+Feeding the model poor or otherwise weak data can lead to a badly trained model that gives bad outcomes. If we were to trust these poor outcomes, then our decision making about the marketing would also be poor, leading to the exact opposite of what we want. It could result in poor decision making and ineffective marketing campaigns, leading to revenue loss and potentially a loss in customer retention. We should make sure to double check the validity of both the data and the outcome of the model before using it further for the decision making process.
 
 Consider:
 
@@ -138,65 +98,22 @@ Part 6 — Complete AI Solution Summary
 Complete this final section:
 
 Business Problem
+An app company is trying to determine which marketing campaigns are more effective for their customer-base and why.
 
 Data Needed
+Ratings, reviews, size of customer base, price of product, and previous marketing strategies if possible.
 
 AI/ML Approach
+Prediction
 
 Type of Learning
+Unsupervised
 
 Model Output
+Determine which marketing strategies are more effective and why
 
 Business Benefit
+This will allow the business to make marketing decisions and strategies much easier.
 
 Potential Risk
-
-Assignment Example
-
-Here is an example
-
-Business Problem
-
-A telecommunications company wants to identify customers who are likely to cancel their subscriptions.
-
-Data Needed
-
-The company could use:
-
-Customer tenure
-Monthly bill
-Number of complaints
-Internet usage
-Contract type
-Number of support calls
-Learning Type
-
-Supervised learning
-
-Why?
-
-Because the company has historical data showing which customers previously cancelled.
-
-Classification or Prediction?
-
-Classification
-
-The model could classify customers as:
-
-Likely to Churn / Not Likely to Churn
-
-Data Quality Problems
-
-The company might have:
-
-Missing customer information
-Incorrect billing information
-Duplicate customer records
-Business Benefit
-
-The company could identify high-risk customers and offer them discounts or improved services before they leave.
-
-Potential Risk
-
-The model could incorrectly identify customers as high-risk, resulting in unnecessary discounts or marketing expenses.
-
+Some of the data is interpretable, and might not give a good concrete result, leading to weaker outcomes and potentially incorrect decision making.
