@@ -1,0 +1,40 @@
+In class activity - Think Like an AI Designer
+For the problem identified in previous assignment , Please complete the following
+What are the features?
+The features include customer ratings, reviews, and amount of customers.
+
+
+What is the label?
+Effectiveness of marketing strategies based on the rate of customer increase.
+
+
+What would training data contain?
+Data should contain examples with effective marketing strategies and poor marketing strategies. 
+
+
+Why should testing data be kept separate?
+In order to make sure the model properly learned from the training data.
+
+
+What could be a false positive?
+Customer rating increasing due to an outside force separate from the marketing strategy could cause the AI to incorrectly attribute that increase to an effective marketing strategy.
+
+
+What could be a false negative?
+Model predicted an increase in customer ratings, but there actually wasn’t. Model could incorrectly attribute certain strategies to success, or fail to understand why some strategies worked over others, leading to it predicting that certain marketing strategies would result in an increase in customers, when it actually does nothing.
+
+
+Would precision or recall be more important?
+Recall, our model isn’t particularly concerned with being precise, it prefers to find all of the correct marketing strategies.
+
+
+What types of poor-quality data could affect this model?
+Some apps could have built-in rewards for ratings, skewing the data. 
+
+
+What could cause this model to overfit?
+If the model incorrectly assumes certain genres or categories of apps attribute to its ratings and customer size, then it could overfit and assume all apps of said genre would have an increase in customers rather than their marketing. 
+
+
+What would make you trust—or not trust—the model's predictions?
+If real-world testing or plenty of evidence corroborated the model’s claims and proved its predictions to be true. 
