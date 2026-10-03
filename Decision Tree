@@ -1,0 +1,164 @@
+Part 1: Select a Dataset — 5 Points
+Choose a dataset from Kaggle that interests you.
+Provide:
+Dataset name
+Golf Play Dataset Extended
+
+
+Kaggle source/link
+https://www.kaggle.com/datasets/samybaladram/golf-play-extended
+
+
+Number of rows
+7,665
+
+
+Number of columns
+16
+
+
+Brief description of the dataset
+This Extended Golf Play Dataset is a rich and detailed collection designed to extend the classic golf dataset. It includes a variety of features to cover many aspects of data science. This dataset is especially useful for teaching because it offers many small datasets within it, each one created for a different learning purpose.
+
+
+What outcome you want your model to predict
+Play: Yes/No (1/0)
+
+
+Example (Do not consider the Titanic dataset for your assignment. This is just an example)
+Dataset: Titanic
+Prediction: Whether a passenger survived
+Target: Survived
+Classes: Survived / Did Not Survive
+ 
+Part 2: Understand Your Dataset — 7 Points
+Explore your dataset and answer:
+What does each row represent?
+Each row represents a person who golfed
+
+
+What are the important columns?
+Weekday, holiday, month, season, temperature, humidity, windy, outlook, play, and crowdedness
+
+
+Which columns could be useful for making predictions?
+Weekday, holiday, month, season, temperature, humidity, windy, outlook, and crowdedness
+
+
+What is your target variable?
+Play 
+
+
+How many observations belong to each target class?
+Out of 7,665 in the play data, 6,266 haven’t played, and 1,399 have played.
+
+
+Are there missing values?
+Not in the values I’ve selected, but reviews has a lot of missing values.
+
+
+Are there any columns that should not be used for prediction? Explain why.
+Reviews, date, ID, play time hours, email campaign, maintenance tasks. Reviews, email campaign, and maintenance task all have long strings that don’t really add that much substance to whether or not the person will have played or not; maintenance task isn’t related to playing, email campaign has too many factors outside of the data, and someone who’s reviewed has already played, so the data point doesn’t really help. Data and ID both contain useless data more for organization than processing. Play time hours can interfere with the target play value, because if someone has no hours, then they haven’t played, meaning the model can just focus on that value instead of anything else.
+
+
+ 
+Part 3: Identify Features and Target — 5 Points
+Identify:
+Features
+Weekday, holiday, month, season, temperature, humidity, windy, outlook, and crowdedness
+Target
+Play
+Explain why you selected your features.
+These features describe the calendar context (weekday, holiday, month, season), the weather conditions (temperature, humidity, windy, outlook), and how busy the course was (crowdedness) on the day in question. These are known before a round happens, unlike PlayTimeHours or Reviews, so they don't leak the outcome, and they are clean structured fields rather than free text that a model can't use directly.
+
+
+ 
+Part 4: Prepare the Data — 8 Points
+Prepare your dataset so it can be used by a machine learning model.
+Address the following:
+Missing values
+Categorical variables
+Non-numeric information
+Duplicate records, if applicable
+Unnecessary columns
+Any other data-quality issues
+For every major decision, explain what you did and why.
+The features month, season, and outlook contain categorical strings, so we use pandas’ built in get_dummies() function to one-hot encode them. Because most of the data has Play at 0, the model is imbalanced, so we balance the class so it treats the 0’s and 1’s the same.
+ 
+Part 5: Training and Testing Data — 5 Points
+Divide your dataset into:
+Training data
+Testing data
+Answer:
+Why should we keep testing data separate from training data?
+Also report how much data you used for training and testing.
+If evaluated on all of the same data, the model would overfit, just memorizing the data rather than predicting it. Splitting the data up into training and test data makes sure the model doesn't do this. I split the data up 80/20, with 6,132 training data and 1,533 testing data. 
+Part 6: Build the decision tree Model — 8 Points
+Build a L model using your selected features.
+Your notebook should clearly show:
+The model being created
+The model being trained
+Predictions being generated
+The predicted results
+Explain in your own words:
+What is a decision tree and why is it appropriate for your problem?
+ A decision tree is a supervised learning model that splits up data into multiple branches of yes/no questions, and branches out into different leaf nodes depending on the answer. It’s a good fit for this because determining whether or not someone will golf is naturally a series of yes/no conditions, like is it a holiday? Is it too windy? Is it raining? Etc. 
+Part 7: Evaluate Your Model — 9 Points
+Evaluate your model using:
+Accuracy
+Report your model's accuracy.
+64%
+Confusion Matrix
+Show and explain your confusion matrix.
+Identify:
+True Positives: 822
+True Negatives: 157
+False Positives: 445
+False Negatives: 109
+Precision
+Report and explain your precision.
+26%; Out of all the times the model predicted someone would play, they actually played about 26% of the time.
+Recall
+Report and explain your recall.
+59%; the model correctly identified 59% of the total actual plays.
+F1-Score
+Report and explain your F1-score.
+68%; out of both play and didn’t play, it  leans more towards predicting didn’t play.
+
+
+Then answer:
+Which metric is most important for your particular problem, and why?
+ Recall is the most important for this problem. The cost of a false negative, where the model predicts someone won’t play when they actually will, is generally worse than a false positive, where the model predicts someone will play but they don’t, because missing real demand is more costly than being a little more prepared on a quiet day. 
+
+
+Part 8: Make a New Prediction — 4 Points
+Create one hypothetical new observation based on your dataset.
+Use your trained model to predict which class this observation belongs to.
+For example:
+Based on the customer's age, income, and credit score, the model predicts that the customer will be approved for the loan.
+Also show the probability associated with the prediction and explain what that probability means.
+ 
+Part 9: Reflection — 4 Points
+Answer the following:
+What did your model predict?
+The model predicted whether or not golf players would play depending on the conditions.
+
+
+How well did the model perform?
+The model performed decent, though definitely can be improved, with a particularly 
+
+
+What did you learn from the confusion matrix?
+The model heavily leans on predicting no, probably because most of the dataset contains 0 play times, so it’s more biased in that direction.
+
+
+What are two limitations of your model?
+There’s a distinct class imbalance, the model not having a lot of positive examples to learn from, so it naturally leans towards predicting no, which severely hinders recall. The weather and calendar features, while good ways to predict whether or not someone plays, are not the full picture, and there are many other factors as to why someone would golf on a particular day.
+
+
+If you had more time, what would you do to improve the model?
+Addressing the class imbalance seems like the best option, as the other factors are too varied to be easily solvable. Simply finding more, or different, datasets that allow the model to evenly get both plays would remedy a lot of the inaccuracies I feel. 
+
+
+
+
